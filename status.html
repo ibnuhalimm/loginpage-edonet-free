@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edonet - Free Internet</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <meta name="theme-color" content="#f1e3cb">
+    <meta name="msapplication-navbutton-color" content="#f1e3cb">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#f1e3cb">
+
+    <link rel="stylesheet" href="./vendor/slickjs/slick.css">
+    <link rel="stylesheet" href="./vendor/slickjs/slick-theme.css">
+
+    <link rel="stylesheet" href="./css/style.min.css">
+
+</head>
+<body>
+    <div id="page--wrapper">
+        <div id="left-container">
+            <div class="container--wrapper">
+
+                <div id="logo-form--outer">
+                    <div id="logo--box">
+                        <div id="logo--wrapper">
+                            <div class="logo-container">
+                                <img src="./img/login_logo.png" alt="Edonet">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="form--box">
+                        <div id="title--text">
+                            Free Internet By Edonet
+                        </div>
+                        <div id="form--wrapper" style="margin-top: 30px">
+                            <div class="form-group">
+                                Anda telah terhubung dengan internet
+                            </div>
+                            <div class="form-button">
+                                <a href="https://google.com" class="btn btn-browsing">
+                                    Browsing
+                                </a>
+                            </div>
+                            <div class="form-button">
+                                <a href="$(link-logout)" class="btn btn-login">
+                                    Logout
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="support--wrapper">
+                    <div class="text">
+                        powered by
+                    </div>
+                    <div class="image">
+                        Edonet
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="right-container">
+            <div id="slider">
+                <div class="slider--image image-01"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./vendor/jquery.min.js"></script>
+    <script src="./vendor/slickjs/slick.min.js"></script>
+    <script>
+        $('#slider').slick({
+            dots: true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            dotsClass: 'slick-dot-bottom',
+            fade: true
+        });
+    </script>
+
+</body>
+</html>

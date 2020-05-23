@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edonet - Free Internet</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <meta name="theme-color" content="#f1e3cb">
+    <meta name="msapplication-navbutton-color" content="#f1e3cb">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#f1e3cb">
+
+    <link rel="stylesheet" href="./vendor/slickjs/slick.css">
+    <link rel="stylesheet" href="./vendor/slickjs/slick-theme.css">
+
+    <link rel="stylesheet" href="./css/style.min.css">
+
+</head>
+<body>
+
+$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	</script>
+$(endif)
+
+    <div id="page--wrapper">
+        <div id="left-container">
+            <div class="container--wrapper">
+
+                <div id="logo-form--outer">
+                    <div id="logo--box">
+                        <div id="logo--wrapper">
+                            <div class="logo-container">
+                                <img src="./img/login_logo.png" alt="Edonet">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="form--box">
+                        <div id="title--text">
+                            Free Internet By Edonet
+                        </div>
+                        $(if error)
+                        <div id="error--wrapper">
+                            <span>$(error)</span>
+                        </div>
+                        $(endif)
+                        <div id="form--wrapper">
+                            <form name="login" action="$(link-login-only)" method="post"
+                                $(if chap-id) onSubmit="return doLogin()" $(endif)>
+
+                                <input type="hidden" name="dst" value="$(link-orig)" />
+                                <input type="hidden" name="popup" value="true" />
+                                <input type="hidden" name="username" id="username" value="free@edonet">
+                                <input type="hidden" name="username" id="username" value="free@edonet">
+
+                                <div class="form-group">
+                                    Edonet Internet Support mengucapkan
+                                    <blockquote>
+                                        Selamat Hari Raya Idul Fitri 1441 H<br>
+                                        Mohon Maaf Lahir dan Bathin
+                                    </blockquote>
+                                </div>
+                                <div class="form-group bottom">
+                                    Silahkan klik tombol di bawah ini untuk menikmati internet gratis
+                                </div>
+                                <div class="form-button">
+                                    <button type="submit" class="btn btn-login">
+                                        Klik Di Sini
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="support--wrapper">
+                    <div class="text">
+                        powered by
+                    </div>
+                    <div class="image">
+                        Edonet
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="right-container">
+            <div id="slider">
+                <div class="slider--image image-01"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./vendor/jquery.min.js"></script>
+    <script src="./vendor/slickjs/slick.min.js"></script>
+    <script>
+        $('#slider').slick({
+            dots: true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            dotsClass: 'slick-dot-bottom',
+            fade: true
+        });
+    </script>
+
+</body>
+</html>
