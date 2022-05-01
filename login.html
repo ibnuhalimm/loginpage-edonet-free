@@ -18,7 +18,7 @@
 </head>
 <body>
 
-<!-- $(if chap-id) -->
+$(if chap-id)
 	<form name="sendin" action="$(link-login-only)" method="post">
 		<input type="hidden" name="username" />
 		<input type="hidden" name="password" />
@@ -35,7 +35,7 @@
 		return false;
 	    }
 	</script>
-<!-- $(endif) -->
+$(endif)
 
     <div id="page--wrapper">
         <div id="left-container">
@@ -54,11 +54,11 @@
                         <div id="title--text">
                             Internet Access By Edonet
                         </div>
-                        <!-- $(if error) -->
+                        $(if error)
                         <div id="error--wrapper">
                             <span>$(error)</span>
                         </div>
-                        <!-- $(endif) -->
+                        $(endif)
                         <div id="form--wrapper">
                             <form name="login" action="$(link-login-only)" method="post"
                                 $(if chap-id) onSubmit="return doLogin()" $(endif)>
